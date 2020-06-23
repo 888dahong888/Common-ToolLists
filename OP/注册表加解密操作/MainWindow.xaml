@@ -1,0 +1,33 @@
+﻿<Window x:Class="注册表加解密操作.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:注册表加解密操作"
+        mc:Ignorable="d"
+        Title="软件激活与试用期限" Height="300" Width="350" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="35"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="试用天数"  Margin="5"/>
+                <TextBox Text="30" Width="30" Margin="5"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <Button Content="创建明码"  Margin="5"/>
+                <Button Content="创建暗码" Margin="5"/>
+                <Button Content="秘钥对比" Margin="5"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Row="3" VerticalAlignment="Bottom">
+            <TextBlock x:Name="tbxdown"  HorizontalAlignment="Left" Visibility="Hidden" Margin="5"></TextBlock>
+        </StackPanel>
+    </Grid>
+</Window>

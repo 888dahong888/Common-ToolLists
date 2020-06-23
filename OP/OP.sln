@@ -7,20 +7,50 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XML文件操作", "XML文�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppSetting配置文件操作", "AppSetting配置文件操作\AppSetting配置文件操作.csproj", "{4822427F-A3D5-4D6E-9922-E5BA07F1E5D5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Timer定时器操作", "Timer定时器操作\Timer定时器操作.csproj", "{D6873BB3-E64B-47F8-9CDD-7B3C8E3243F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "注册表加解密操作", "注册表加解密操作\注册表加解密操作.csproj", "{8F457514-D0EF-4428-849F-D62CE969334A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
 		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{E047A613-EA74-4781-A605-AA590F328526}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E047A613-EA74-4781-A605-AA590F328526}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E047A613-EA74-4781-A605-AA590F328526}.Debug|x64.ActiveCfg = Debug|x64
+		{E047A613-EA74-4781-A605-AA590F328526}.Debug|x64.Build.0 = Debug|x64
 		{E047A613-EA74-4781-A605-AA590F328526}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E047A613-EA74-4781-A605-AA590F328526}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E047A613-EA74-4781-A605-AA590F328526}.Release|x64.ActiveCfg = Release|x64
+		{E047A613-EA74-4781-A605-AA590F328526}.Release|x64.Build.0 = Release|x64
 		{4822427F-A3D5-4D6E-9922-E5BA07F1E5D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4822427F-A3D5-4D6E-9922-E5BA07F1E5D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4822427F-A3D5-4D6E-9922-E5BA07F1E5D5}.Debug|x64.ActiveCfg = Debug|x64
+		{4822427F-A3D5-4D6E-9922-E5BA07F1E5D5}.Debug|x64.Build.0 = Debug|x64
 		{4822427F-A3D5-4D6E-9922-E5BA07F1E5D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4822427F-A3D5-4D6E-9922-E5BA07F1E5D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4822427F-A3D5-4D6E-9922-E5BA07F1E5D5}.Release|x64.ActiveCfg = Release|x64
+		{4822427F-A3D5-4D6E-9922-E5BA07F1E5D5}.Release|x64.Build.0 = Release|x64
+		{D6873BB3-E64B-47F8-9CDD-7B3C8E3243F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6873BB3-E64B-47F8-9CDD-7B3C8E3243F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6873BB3-E64B-47F8-9CDD-7B3C8E3243F5}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D6873BB3-E64B-47F8-9CDD-7B3C8E3243F5}.Debug|x64.Build.0 = Debug|Any CPU
+		{D6873BB3-E64B-47F8-9CDD-7B3C8E3243F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6873BB3-E64B-47F8-9CDD-7B3C8E3243F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6873BB3-E64B-47F8-9CDD-7B3C8E3243F5}.Release|x64.ActiveCfg = Release|Any CPU
+		{D6873BB3-E64B-47F8-9CDD-7B3C8E3243F5}.Release|x64.Build.0 = Release|Any CPU
+		{8F457514-D0EF-4428-849F-D62CE969334A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F457514-D0EF-4428-849F-D62CE969334A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F457514-D0EF-4428-849F-D62CE969334A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8F457514-D0EF-4428-849F-D62CE969334A}.Debug|x64.Build.0 = Debug|Any CPU
+		{8F457514-D0EF-4428-849F-D62CE969334A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F457514-D0EF-4428-849F-D62CE969334A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F457514-D0EF-4428-849F-D62CE969334A}.Release|x64.ActiveCfg = Release|Any CPU
+		{8F457514-D0EF-4428-849F-D62CE969334A}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
