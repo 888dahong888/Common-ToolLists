@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Timer定时器操作", "Tim
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "注册表加解密操作", "注册表加解密操作\注册表加解密操作.csproj", "{8F457514-D0EF-4428-849F-D62CE969334A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CallBack异步回调操作", "CallBack异步回调操作\CallBack异步回调操作.csproj", "{4B246964-DA08-4AA1-87DC-335B43E9D6FE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,14 @@ Global
 		{8F457514-D0EF-4428-849F-D62CE969334A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8F457514-D0EF-4428-849F-D62CE969334A}.Release|x64.ActiveCfg = Release|Any CPU
 		{8F457514-D0EF-4428-849F-D62CE969334A}.Release|x64.Build.0 = Release|Any CPU
+		{4B246964-DA08-4AA1-87DC-335B43E9D6FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B246964-DA08-4AA1-87DC-335B43E9D6FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B246964-DA08-4AA1-87DC-335B43E9D6FE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{4B246964-DA08-4AA1-87DC-335B43E9D6FE}.Debug|x64.Build.0 = Debug|Any CPU
+		{4B246964-DA08-4AA1-87DC-335B43E9D6FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B246964-DA08-4AA1-87DC-335B43E9D6FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B246964-DA08-4AA1-87DC-335B43E9D6FE}.Release|x64.ActiveCfg = Release|Any CPU
+		{4B246964-DA08-4AA1-87DC-335B43E9D6FE}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
