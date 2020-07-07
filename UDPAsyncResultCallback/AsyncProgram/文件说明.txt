@@ -1,0 +1,31 @@
+﻿(一)让我们来看看同步异步的区别</h1>
+同步方法调用在程序继续执行之前需要等待同步方法执行完毕返回结果。
+异步方法则在被调用之后立即返回以便程序在被调用方法完成其任务的同时执行其它操作。
+.NET框架基类库中有好几种类都可以提供同步和异步的方法调用。
+因为同步方法调用会导致程序流程中途等待，所以采用同步方法的情况下往往会导致程序执行的延迟，相比来说，在某些条件下选择异步方法调用就可能更好一些。
+例如：有的时候程序需要给多个Web服务发出请求，还有远程处理信道（HTTP、TCP）和代理，这时就最好采用异步方法。
+.NET Framework允许异步调用任何方法，定义与需要调用的方法具有相同签名的委托。CLR将自动为该委托定义添加适当签名的BeginInvoke虚方法和EndInvoke虚方法和Invoke方法。
+
+(二) 我们先来了解这2个方法和一个委托和一个接口
+(1)BeginInvoke方法可启动异步调用。
+它与您需要异步执行的方法具有相同的参数，另外它还有两个可选参数。第一个参数是一个AsyncCallback 委托，该委托引用在异步调用完成时要调用的方法。第二个参数是一个用户定义的对象，该对象可向回调方法传递信息。BeginInvoke立即返回，不等待异步调用完成。BeginInvoke 会返回 IAsyncResult，这个结果可用于监视异步调用进度。
+结果对象IAsyncResult是从开始操作返回的，并且可用于获取有关异步开始操作是否已完成的状态。结果对象被传递到结束操作，该操作返回调用的最终返回值。在开始操作中可以提供可选的回调。如果提供回调，在调用结束后，将调用该回调；并且回调中的代码可以调用结束操作。
+(2)EndInvoke方法检索异步调用的结果。
+调用 BeginInvoke 后可随时调用 EndInvoke方法；如果异步调用尚未完成，EndInvoke 将一直阻止调用线程，直到异步调用完成后才允许调用线程执行。EndInvoke 的参数包括您需要异步执行的方法的 out 和 ref 参数以及由BeginInvoke 返回的 IAsyncResult。
+(3)AsyncCallback委托用于指定在开始操作完成后应被调用的方法
+AsyncCallback委托被作为开始操作上的第二个到最后一个参数传递。
+代码原型如下：
+[Serializable]
+publicdelegate void AsyncCallback(IAsyncResult ar);
+AsyncCallback为客户端应用程序提供完成异步操作的方法。开始异步操作时，该回调委托被提供给客户端。AsyncCallback引用的事件处理程序包含完成客户端异步任务的程序逻辑。
+AsyncCallback使用 IAsyncResult 接口获取异步操作的状态。
+(4)IAsyncResult接口
+它表示异步操作的状态.该接口定义了4个公用属性。
+
+(四)总结**四种使用BeginInvoke和EndInvoke进行异步调用的常用方法。
+在调用BeginInvoke 之后，可以执行下列操作：
+1.进行某些操作，然后调用 EndInvoke 一直阻止到调用完成。
+2.使用 System.IAsyncResult.AsyncWaitHandle 属性获取 WaitHandle，使用它的 WaitOne 方法一直阻止执行直到发出 WaitHandle 信号，然后调用 EndInvoke。
+3.轮询由 BeginInvoke 返回的 IAsyncResult，确定异步调用何时完成，然后调用 EndInvoke。
+4.将用于回调方法的委托传递给 BeginInvoke。异步调用完成后，将在ThreadPool 线程上执行该方法。该回调方法将调用 EndInvoke。
+注意： 每次都要调用EndInvoke来完成异步调用。
