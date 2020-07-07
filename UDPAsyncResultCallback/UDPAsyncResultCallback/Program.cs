@@ -10,6 +10,14 @@ namespace UDPAsyncResultCallback
     {
         static void Main(string[] args)
         {
+
+            HandlerClassPacket packet = delegate (DataModel dm)
+              {
+                  var msg = dm.X;
+                  Console.WriteLine(msg);
+              };
+            var l1 = new UDPListener(10001, packet);
+            Console.ReadLine();
         }
     }
 }
