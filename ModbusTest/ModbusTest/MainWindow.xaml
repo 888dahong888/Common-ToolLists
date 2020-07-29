@@ -1,0 +1,96 @@
+﻿<Window x:Class="ModbusTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ModbusTest"
+        mc:Ignorable="d"
+        Title="Modbus协议" Height="400" Width="360">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <GroupBox Header="通讯参数">
+                <WrapPanel>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="从站地址" Margin="5"/>
+                        <TextBox Width="50" Text="1" Margin="5"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="串口号:" Margin="5"/>
+                        <TextBox Width="50" Margin="5"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="波特率:" Margin="5"/>
+                        <TextBox Width="50" Margin="5"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="数据位:" Margin="5"/>
+                        <TextBox Width="50" Margin="5"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="校验位:" Margin="5"/>
+                        <TextBox Width="50" Margin="5"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock Text="停止位:" Margin="5"/>
+                        <TextBox Width="50" Margin="5"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Button Content="打开串口" Margin="5"/>
+                        <Button Content="关闭串口" Margin="5"/>
+                    </StackPanel>
+                </WrapPanel>
+            </GroupBox>
+        </Grid>
+        <Grid Grid.Row="1">
+            <GroupBox Header="数据测试">
+                <StackPanel VerticalAlignment="Center">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left">
+                        <TextBlock Text="线圈00000:" Margin="5"/>
+                        <TextBox Width="50" Margin="5"/>
+                        <TextBlock Text="线圈00004:" Margin="5"/>
+                        <TextBox Width="50" Margin="5"/>
+                        <Button Content="读取" Width="50" Margin="5"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left">
+                        <TextBlock Text="线圈00001:" Margin="5"/>
+                        <TextBox Width="50" Margin="5"/>
+                        <TextBlock Text="线圈00005:" Margin="5"/>
+                        <TextBox Width="50" Margin="5"/>
+                        <Button Content="写入" Width="50" Margin="5"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left">
+                        <TextBlock Text="线圈00002:" Margin="5"/>
+                        <TextBox Width="50" Margin="5"/>
+                        <TextBlock Text="线圈00006:" Margin="5"/>
+                        <TextBox Width="50" Margin="5"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left">
+                        <TextBlock Text="线圈00003:" Margin="5"/>
+                        <TextBox Width="50" Margin="5"/>
+                        <TextBlock Text="线圈00007:" Margin="5"/>
+                        <TextBox Width="50" Margin="5"/>
+                    </StackPanel>
+                </StackPanel>
+            </GroupBox>
+        </Grid>
+        <Grid Grid.Row="2">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left">
+                    <TextBlock Text="寄存器40001:" Margin="20,10,5,5"/>
+                    <TextBox Width="50" Margin="20,10,5,5"/>
+                    <Button Content="读取" Margin="20,10,5,5" Width="50"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left">
+                    <TextBlock Text="寄存器40003:" Margin="20,10,5,5"/>
+                    <TextBox Width="50" Margin="20,10,5,5"/>
+                    <Button Content="写入" Margin="20,10,5,5" Width="50"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
